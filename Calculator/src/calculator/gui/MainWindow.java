@@ -3,17 +3,12 @@ package calculator.gui;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.SpringLayout;
-import javax.swing.JLabel;
-import java.awt.Color;
 import javax.swing.SwingConstants;
 import javax.swing.JPanel;
-import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.BoxLayout;
 import java.awt.FlowLayout;
 import java.awt.Dimension;
 import java.awt.Insets;
@@ -102,48 +97,86 @@ public class MainWindow {
 		divideButton.setMinimumSize(new Dimension(50, 50));
 		divideButton.setMaximumSize(new Dimension(50, 50));
 		controlPanel.add(divideButton);
+
+		JButton oneButton = new JButton("1");
+		oneButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String tmpDisplayData = displayField.getText();
+				displayField.setText(tmpDisplayData.concat("1"));
+			}
+		});
+		oneButton.setPreferredSize(new Dimension(50, 50));
+		oneButton.setMinimumSize(new Dimension(50, 50));
+		oneButton.setMaximumSize(new Dimension(50, 50));
+		controlPanel.add(oneButton);
 		
-		JButton sevenButton = new JButton("7");
-		sevenButton.setPreferredSize(new Dimension(50, 50));
-		sevenButton.setMinimumSize(new Dimension(50, 50));
-		sevenButton.setMaximumSize(new Dimension(50, 50));
-		controlPanel.add(sevenButton);
+		JButton twoButton = new JButton("2");
+		twoButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String tmpDisplayData = displayField.getText();
+				displayField.setText(tmpDisplayData.concat("2"));
+			}
+		});
+		twoButton.setPreferredSize(new Dimension(50, 50));
+		twoButton.setMinimumSize(new Dimension(50, 50));
+		twoButton.setMaximumSize(new Dimension(50, 50));
+		controlPanel.add(twoButton);
 		
-		JButton eightButton = new JButton("8");
-		eightButton.setPreferredSize(new Dimension(50, 50));
-		eightButton.setMinimumSize(new Dimension(50, 50));
-		eightButton.setMaximumSize(new Dimension(50, 50));
-		controlPanel.add(eightButton);
+		threeButton = new JButton("3");
+		threeButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String tmpDisplayData = displayField.getText();
+				displayField.setText(tmpDisplayData.concat("3"));
+			}
+		});
+		threeButton.setPreferredSize(new Dimension(50, 50));
+		threeButton.setMinimumSize(new Dimension(50, 50));
+		threeButton.setMaximumSize(new Dimension(50, 50));
+		controlPanel.add(threeButton);
 		
-		JButton nineButton = new JButton("9");
-		nineButton.setPreferredSize(new Dimension(50, 50));
-		nineButton.setMinimumSize(new Dimension(50, 50));
-		nineButton.setMaximumSize(new Dimension(50, 50));
-		controlPanel.add(nineButton);
+		JButton fourButton = new JButton("4");
+		fourButton.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				String tmpDisplayData = displayField.getText();
+				displayField.setText(tmpDisplayData.concat("4"));
+			}
+		});
 		
 		JButton multiplyButton = new JButton("*");
 		multiplyButton.setPreferredSize(new Dimension(50, 50));
 		multiplyButton.setMinimumSize(new Dimension(50, 50));
 		multiplyButton.setMaximumSize(new Dimension(50, 50));
 		controlPanel.add(multiplyButton);
-		
-		JButton fourButton = new JButton("4");
 		fourButton.setPreferredSize(new Dimension(50, 50));
 		fourButton.setMinimumSize(new Dimension(50, 50));
 		fourButton.setMaximumSize(new Dimension(50, 50));
 		controlPanel.add(fourButton);
 		
 		JButton fiveButton = new JButton("5");
+		fiveButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String tmpDisplayData = displayField.getText();
+				displayField.setText(tmpDisplayData.concat("5"));				
+			}
+		});
 		fiveButton.setPreferredSize(new Dimension(50, 50));
 		fiveButton.setMinimumSize(new Dimension(50, 50));
 		fiveButton.setMaximumSize(new Dimension(50, 50));
 		controlPanel.add(fiveButton);
 		
 		JButton sixButton = new JButton("6");
+		sixButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String tmpDisplayData = displayField.getText();
+				displayField.setText(tmpDisplayData.concat("6"));
+			}
+		});
 		sixButton.setPreferredSize(new Dimension(50, 50));
 		sixButton.setMinimumSize(new Dimension(50, 50));
 		sixButton.setMaximumSize(new Dimension(50, 50));
 		controlPanel.add(sixButton);
+		
+
 		
 		JButton subtractButton = new JButton("-");
 		subtractButton.setPreferredSize(new Dimension(50, 50));
@@ -151,23 +184,43 @@ public class MainWindow {
 		subtractButton.setMaximumSize(new Dimension(50, 50));
 		controlPanel.add(subtractButton);
 		
-		JButton oneButton = new JButton("1");
-		oneButton.setPreferredSize(new Dimension(50, 50));
-		oneButton.setMinimumSize(new Dimension(50, 50));
-		oneButton.setMaximumSize(new Dimension(50, 50));
-		controlPanel.add(oneButton);
+		JButton eightButton = new JButton("8");
+		eightButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String tmpDisplayData = displayField.getText();
+				displayField.setText(tmpDisplayData.concat("8"));
+			}
+		});
 		
-		JButton twoButton = new JButton("2");
-		twoButton.setPreferredSize(new Dimension(50, 50));
-		twoButton.setMinimumSize(new Dimension(50, 50));
-		twoButton.setMaximumSize(new Dimension(50, 50));
-		controlPanel.add(twoButton);
+		JButton sevenButton = new JButton("7");
+		sevenButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String tmpDisplayData = displayField.getText();
+				displayField.setText(tmpDisplayData.concat("7"));
+			}
+		});
+		sevenButton.setPreferredSize(new Dimension(50, 50));
+		sevenButton.setMinimumSize(new Dimension(50, 50));
+		sevenButton.setMaximumSize(new Dimension(50, 50));
+		controlPanel.add(sevenButton);
+		eightButton.setPreferredSize(new Dimension(50, 50));
+		eightButton.setMinimumSize(new Dimension(50, 50));
+		eightButton.setMaximumSize(new Dimension(50, 50));
+		controlPanel.add(eightButton);
 		
-		threeButton = new JButton("3");
-		threeButton.setPreferredSize(new Dimension(50, 50));
-		threeButton.setMinimumSize(new Dimension(50, 50));
-		threeButton.setMaximumSize(new Dimension(50, 50));
-		controlPanel.add(threeButton);
+		JButton nineButton = new JButton("9");
+		nineButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String tmpDisplayData = displayField.getText();
+				displayField.setText(tmpDisplayData.concat("9"));
+			}
+		});
+		nineButton.setPreferredSize(new Dimension(50, 50));
+		nineButton.setMinimumSize(new Dimension(50, 50));
+		nineButton.setMaximumSize(new Dimension(50, 50));
+		controlPanel.add(nineButton);
+		
+
 		
 		JButton addButton = new JButton("+");
 		addButton.setPreferredSize(new Dimension(50, 50));
